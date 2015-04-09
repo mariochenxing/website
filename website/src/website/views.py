@@ -6,6 +6,8 @@ from django.core.context_processors import request
 import datetime
 from django.http import Http404
 from django.shortcuts import render_to_response
+from urllib2 import Request
+from symbol import except_clause
 
 
 def hello(request):
@@ -23,5 +25,37 @@ def hours_ahead(request,hour_offset):
     except ValueError:
         raise Http404()
     next_time = datetime.datetime.now()+datetime.timedelta(hours=hour_offset)
-    return render_to_response('hours_ahead.html',locals())  
+    return render_to_response('hours_ahead.html',locals())
+
+def ua_display_bad(request):
+    ua = request.META['HTTP_USER_AGENT']
+    return HttpResponse('your brower is %s'%ua)
+
+def ua_display_good1(request):
+    try:
+        ua=request.META['HTTP_USER_AGENT']
+    except KeyError:
+        ua = 'unknown'
+    return HttpResponse("your brower is %s"%ua)
+
+def ua_display_good2(request):
+    ua = request.META.get('HTTP_USER_AGENT','unknown')
+    return HttpResponse("Your brower is %s"%ua)  
     
+def display_meta(request):
+    values = request.META.items()
+    values.sort()
+    html = []
+    for k,v in values:
+        html.append(u'<tr><td>%s</td><td>%s</td></tr>'%(k,v))
+    return HttpResponse('<table>%s</table>'%'\n'.join(html))
+
+def search_form(request):
+    return render_to_response('search_form.html')
+
+def search(request):
+    if 'q' in request.GET:
+        message = 'you searched for:%r'%request.GET['q']
+    else:
+        message = 'you submitted an empty form.'
+    return HttpResponse(message)
