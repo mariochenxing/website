@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;website/src/website/send email.py&apos; to &apos;send_email.py&apos;" description="Rename resource &apos;send email.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/website/send email.py" name="send_email.py" stamp="1431311018219" updateReferences="true"/>
+</session>

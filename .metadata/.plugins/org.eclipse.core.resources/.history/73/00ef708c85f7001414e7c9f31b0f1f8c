@@ -1,0 +1,3 @@
+def sendEmail(request):
+    send_email('subject','this is the message of email','chen77452@126.com',['reseive@example.com'],fail_silently=True)
+    return HttpResponse('successful')

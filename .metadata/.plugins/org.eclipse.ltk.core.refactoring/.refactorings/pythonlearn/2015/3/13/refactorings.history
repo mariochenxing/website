@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;pythonlearn/src/test1&apos; to &apos;hardwaylearnpython&apos;" description="Rename resource &apos;test1&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test1" name="hardwaylearnpython" stamp="1427266695598" updateReferences="true"/>
+</session>

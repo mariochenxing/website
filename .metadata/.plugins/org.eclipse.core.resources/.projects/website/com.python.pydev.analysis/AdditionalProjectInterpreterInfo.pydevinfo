@@ -1,0 +1,105 @@
+-- VERSION_4
+-- START DISKCACHE
+D:\work\.metadata\.plugins\org.eclipse.core.resources\.projects\website\com.python.pydev.analysis\v2_indexcache
+website.wsgi|1427436764192|D:\work\website\src\website\wsgi.py
+books.migrations.0001_initial|1428384941412|D:\work\website\src\books\migrations\0001_initial.py
+books.views|1427952848591|D:\work\website\src\books\views.py
+books.models|1428399584742|D:\work\website\src\books\models.py
+contact.views|1431333278222|D:\work\website\src\contact\views.py
+contact.forms|1431076462656|D:\work\website\src\contact\forms.py
+website.urls|1431333643965|D:\work\website\src\website\urls.py
+contact.__init__|1430891796408|D:\work\website\src\contact\__init__.py
+manage|1427436764192|D:\work\website\src\manage.py
+books.tests|1427952848591|D:\work\website\src\books\tests.py
+website.__init__|1427436764192|D:\work\website\src\website\__init__.py
+books.admin|1428478329586|D:\work\website\src\books\admin.py
+website.sendemail|1431310993011|D:\work\website\src\website\sendemail.py
+website.testSendEmail|1431334354998|D:\work\website\src\website\testSendEmail.py
+website.views|1431312630521|D:\work\website\src\website\views.py
+books.migrations.__init__|1427952848606|D:\work\website\src\books\migrations\__init__.py
+books.__init__|1427952848606|D:\work\website\src\books\__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+18
+1=website.wsgi
+3=books.models
+8=books.migrations.0001_initial
+4=contact.views
+5=contact.forms
+16=Migration
+10=website.urls
+11=Publisher
+15=BookAdmin
+2=books.admin
+7=website.sendemail
+13=Book
+14=ContactForm
+18=Publisher.Meta
+9=website.testSendEmail
+12=Author
+17=AuthorAdmin
+6=website.views
+-- END DICTIONARY
+-- START TREE 1
+32
+!<m|0|
+all|0|
+app|1|application!11@
+aut|2|AuthorAdmin!17@Author!25@
+bas|0|
+boo|2|Book!25@BookAdmin!17@
+con|2|contact!34@ContactForm!41@
+cur|1|current_datetime!50@
+dat|0|
+deb|0|
+dis|1|display_meta!50@
+ema|6|EMAIL_HOST_PASSWORD!59@EMAIL_HOST!59@EMAIL_BACKEND!59@EMAIL_HOST_USER!59@EMAIL_PORT!59@EMAIL_USE_TLS!59@
+hel|1|hello!50@
+hom|1|homepage!50@
+hou|1|hours_ahead!50@
+ins|0|
+lan|0|
+mid|0|
+mig|1|Migration!65@
+pub|1|Publisher!25@
+roo|0|
+sea|1|search!50@
+sec|0|
+sen|1|sendEmail!74@
+sta|0|
+tem|0|
+tha|1|thank!34@
+tim|0|
+ua_|3|ua_display_good2!50@ua_display_bad!50@ua_display_good1!50@
+url|1|urlpatterns!83@
+use|0|
+wsg|0|
+-- END TREE
+-- START TREE 2
+25
+__u|3|__unicode__!11&26@__unicode__!12&26@__unicode__!13&26@
+add|1|address!11&27@
+aut|1|authors!13&27@
+cit|1|city!11&27@
+cle|1|clean_message!14&42@
+cou|1|country!11&27@
+dat|1|date_hierarchy!15&19@
+dep|1|dependencies!16&67@
+ema|2|email!12&27@email!14&43@
+fil|1|filter_horizontal!15&19@
+fir|1|first_name!12&27@
+las|1|last_name!12&27@
+lis|3|list_filter!15&19@list_display!17&19@list_display!15&19@
+mes|1|message!14&43@
+met|1|Meta!11&25@
+nam|1|name!11&27@
+ope|1|operations!16&67@
+ord|2|ordering!18&27@ordering!15&19@
+pub|2|publisher!13&27@publication_date!13&27@
+raw|1|raw_id_fields!15&19@
+sea|1|search_fields!17&19@
+sta|1|state_province!11&27@
+sub|1|subject!14&43@
+tit|1|title!13&27@
+web|1|website!11&27@
+-- END TREE

@@ -8,6 +8,9 @@ from django.http import Http404
 from django.shortcuts import render_to_response
 from urllib2 import Request
 from symbol import except_clause
+from books.models import Book
+from django.template.defaultfilters import title
+from website import sendemail
 
 
 def hello(request):
@@ -50,12 +53,20 @@ def display_meta(request):
         html.append(u'<tr><td>%s</td><td>%s</td></tr>'%(k,v))
     return HttpResponse('<table>%s</table>'%'\n'.join(html))
 
-def search_form(request):
-    return render_to_response('search_form.html')
 
 def search(request):
+    errors = []
     if 'q' in request.GET:
-        message = 'you searched for:%r'%request.GET['q']
-    else:
-        message = 'you submitted an empty form.'
-    return HttpResponse(message)
+        q = request.GET['q']
+        if not q:
+            errors.append('Enter a search term.')
+        elif len(q)>20:
+            errors.append('Please enter at most 20 characters.')
+        else:
+            books = Book.objects.filter(title__icontains=q)
+            return render_to_response('search_results.html',
+                {'books':books,'query':q})
+    return render_to_response('search_form.html',
+        {'errors':errors})
+    
+    
